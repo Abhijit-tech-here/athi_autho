@@ -1,0 +1,27 @@
+{
+  "name": "athi-autho",
+  "version": "1.0.0",
+  "description": "A Node.js application for authentication and security using JWT, bcrypt, and cookie-parser.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "keywords": [
+    "authentication",
+    "JWT",
+    "bcrypt",
+    "cookie-parser",
+    "express"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1"
+  }
+}

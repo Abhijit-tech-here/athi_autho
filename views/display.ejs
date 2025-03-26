@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Dashboard</title>
+    <link rel="stylesheet" href="/styles/display.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Platefull</h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><span>🍽️</span> Available Donations</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1>Available Donations</h1>
+        <div class="user-list">
+            <% posts.forEach(function(post) { %>
+            <div class="user-card">
+                <a href="/order/<%= post._id %>" class="order-btn">Order Now</a>
+                <img src="https://th.bing.com/th/id/OIP.kAR0YfIVMOtMldlUxErYyQHaEo?rs=1&pid=ImgDetMain" alt="">
+                <div class="user-details">
+                    <h2><%= post.pname %></h2>
+                    <p><strong>Contact:</strong> <%= post.pcontact %></p>
+                    <p><strong>Address:</strong> <%= post.paddress %></p>
+                    <p><strong>Food Type:</strong> <%= post.food_type %></p>
+                    <p><strong>Quantity:</strong> <%= post.pquantity %></p>
+                </div>
+                <div class="actions">
+                    <a href="/edit/<%= post._id %>">Edit</a>
+                    <a href="/delete/<%= post._id %>" class="delete">Delete</a>
+                </div>
+            </div>
+            <% }) %>
+            
+
+        </div>
+
+        
+    </main>
+</div>
+
+</body>
+</html>
